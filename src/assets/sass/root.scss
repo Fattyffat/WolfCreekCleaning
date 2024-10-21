@@ -15,6 +15,7 @@
         --headerColor: #1a1a1a;
         --bodyTextColor: #4e4b66;
         --bodyTextColorWhite: #fafbfc;
+        --backgroundColor: #fff; 
 
         /* 13px - 16px */
         --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -1032,7 +1033,7 @@
             margin: 0 auto;
             margin-top: calc(70 / 16 * 1rem);
             margin-bottom: calc(30 / 16 * 1rem);
-            max-width: calc(500 / 16 * 1rem);
+            max-width: calc(700 / 16 * 1rem);
             width: 96%;
             font-size: calc(64 / 30 * 1rem);
             color: #fff;
@@ -1182,7 +1183,7 @@
                 top: 0;
                 left: 0;
                 content: "";
-                opacity: 0.7;
+                opacity: 0.5;
                 display: block;
                 background: #000;
                 height: 100%;
@@ -1192,35 +1193,10 @@
         &:before {
             display: none;
         }
-        &:after {
-            z-index: -3;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            content: "";
-            opacity: 1;
-            transform: translateX(-50%);
-            display: block;
-            background: url("/assets/svgs/cta-squares.svg");
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            height: calc(1108 / 16 * 1rem);
-            width: calc(2000 / 16 * 1rem);
-        }
+
     }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #cta {
-            &:after {
-                display: none;
-            }
-        }
-    }
-}
 
 /*-- -------------------------- -->
 <---           Footer           -->
