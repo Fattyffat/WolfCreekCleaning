@@ -7,6 +7,7 @@
   #RTsbsr-952,
   #RTsbst-952 {
     padding: var(--sectionPadding);
+    background-color: var(--backgroundColor);
     position: relative;
     /* clips anything overflowing */
     overflow: hidden;
@@ -302,7 +303,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #RTsbsr-952 {
-    background-color: #1a1a1a;
+    background-color: #363636;
   }
   #RTsbsr-952 .cs-title,
   #RTsbsr-952 .cs-header,
