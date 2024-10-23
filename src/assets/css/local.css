@@ -13,6 +13,8 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
+    /* Initial state for animation */
+    /* When visible in viewport */
   }
   #why-choose-892 .cs-container {
     width: 100%;
@@ -94,6 +96,15 @@
     top: -13.75rem;
     right: -3.75rem;
     transform: rotate(-66deg);
+  }
+  #why-choose-892 .cs-item {
+    opacity: 0;
+    transform: translateY(50px); /* Adjust for sliding effect */
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  }
+  #why-choose-892 .cs-item.visible {
+    opacity: 1;
+    transform: translateY(0); /* Reset to normal position */
   }
 }
 /* Tablet - 768px */

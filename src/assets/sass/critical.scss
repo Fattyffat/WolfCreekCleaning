@@ -12,44 +12,9 @@
         /* 130px - 450px */
         padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
         position: relative;
-        z-index: 1;
+        z-index: 0;
         /* Prevents white rectangle pseudos from overlapping the sections below */
         overflow: hidden;
-
-        &:before {
-            /* Left side of the triangle */
-            content: "";
-            width: calc(500 / 16 * 1rem);
-            /* make really long so it covers the whole screen all the way to desktop */
-            height: calc(4000 / 16 * 1rem);
-            background: #fff;
-            opacity: 1;
-            transform: rotate(-67deg);
-            transform-origin: center;
-            position: absolute;
-            display: block;
-            bottom: calc(-2235 / 16 * 1rem);
-            /* this makes the right edge sit at the 50% line at all times */
-            right: 50%;
-            z-index: 0;
-        }
-
-        &:after {
-            /* Right side of the triangle */
-            content: "";
-            width: calc(500 / 16 * 1rem);
-            height: calc(4000 / 16 * 1rem);
-            background: #fff;
-            opacity: 1;
-            transform: rotate(67deg);
-            transform-origin: center;
-            position: absolute;
-            display: block;
-            bottom: calc(-2235 / 16 * 1rem);
-            /* this makes the left edge sit at the 50% line at all times */
-            left: 50%;
-            z-index: 0;
-        }
 
         .cs-background {
             width: 100%;
@@ -58,7 +23,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            z-index: -2;
+            z-index: -1;
 
             &:before {
                 /* Overlay */
@@ -90,6 +55,7 @@
             width: 100%;
             max-width: calc(1280 / 16 * 1rem);
             margin: auto;
+            
         }
 
         .cs-title {
@@ -162,12 +128,15 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #h-services-143 {
+
+        
         /* 40px - 100px */
         padding: 0 calc(16 / 16 * 1rem) clamp(2.5rem, 7.9vw, 6.25rem)
             calc(16 / 16 * 1rem);
         position: relative;
+
         /* give a higher z index than the hero so it can sit on top */
-        z-index: 10;
+    
         background-color: var(--backgroundColor);
 
         .cs-card-group {
@@ -183,9 +152,10 @@
             box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
             border-radius: calc(5 / 16 * 1rem);
             border-top: 8px solid var(--primary);
-            background-color: #fff;
+            background-color: #d3d3cf;
             /* prevents padding and border from affecting height and width */
             box-sizing: border-box;
+            z-index: 999;
         }
 
         .cs-item {
@@ -236,6 +206,19 @@
             max-width: calc(360 / 16 * 1rem);
             margin: 0 auto;
             color: var(--bodyTextColor);
+        }
+
+        /* Initial state for animation */
+        .cs-item {
+            opacity: 0;
+            transform: translateY(50px); /* Adjust for sliding effect */
+            transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Longer duration */
+        }
+
+        /* When visible in viewport */
+        .cs-item.visible {
+            opacity: 1;
+            transform: translateY(0); /* Reset to normal position */
         }
     }
 }

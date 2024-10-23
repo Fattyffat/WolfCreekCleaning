@@ -140,7 +140,7 @@ eleventyNavigation:
             </div>
             <ul class="cs-card-group">
                 <li class="cs-item">
-                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fballs1.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
+                    <img class="cs-icon" src="/assets/svgs/serviceBalls.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
                     <!-- Text Grouped For Flexbox-->
                     <div class="cs-text-group">
                         <h3 class="cs-h3">Reliable & Trustworthy</h3>
@@ -151,7 +151,7 @@ eleventyNavigation:
                     </div>
                 </li>
                 <li class="cs-item">
-                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fballs2.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
+                    <img class="cs-icon" src="/assets/svgs/serviceBalls2.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
                     <!-- Text Grouped For Flexbox-->
                     <div class="cs-text-group">
                         <h3 class="cs-h3">Customized Cleaning Plans</h3>
@@ -162,7 +162,7 @@ eleventyNavigation:
                     </div>
                 </li>
                 <li class="cs-item">
-                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fballs3.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
+                    <img class="cs-icon" src="/assets/svgs/serviceBalls3.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
                     <!-- Text Grouped For Flexbox-->
                     <div class="cs-text-group">
                         <h3 class="cs-h3">Eco-Friendly Products</h3>
@@ -175,7 +175,7 @@ eleventyNavigation:
             </ul>
             <a href="" class="cs-button-solid">Contact Us</a>
             <!--Floating Arrow Graphic-->
-            <img class="cs-floater" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Forange-arrow.svg" alt="arrow" loading="lazy" decoding="async" aria-hidden="true">
+            <img class="cs-floater" src="/assets/svgs/arrowPointer.svg" alt="arrow" loading="lazy" decoding="async" aria-hidden="true">
         </div>
     </section>
 
@@ -222,9 +222,43 @@ eleventyNavigation:
             <a aria-label="read more reviews" href="" class="cs-button-solid">Read More</a>
         </div>
     </section>
-                                
+
                                 
                                 
 
     {% include 'components/cta.html' %}
+
+
+
+
+
+    <script>
+        // Wait for the document to load
+        document.addEventListener("DOMContentLoaded", function () {
+            const observerOptions = {
+                root: null,   // Use the viewport as root
+                threshold: 0.1 // Trigger animation when 10% of the section is visible
+            };
+    
+            // Callback for when the section becomes visible
+            function handleIntersection(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible'); // Add visible class to trigger CSS animation
+                        observer.unobserve(entry.target); // Stop observing once it's visible
+                    }
+                });
+            }
+    
+            // Create the observer
+            const observer = new IntersectionObserver(handleIntersection, observerOptions);
+    
+            // Target all the items inside the .cs-card-group for animation
+            const csItems = document.querySelectorAll('.cs-item');
+    
+            // Observe each item
+            csItems.forEach(item => observer.observe(item));
+        });
+    </script>
+    
 {% endblock %}

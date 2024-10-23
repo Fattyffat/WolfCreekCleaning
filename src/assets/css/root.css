@@ -1,18 +1,17 @@
-/* CODESTITCH STYLES, RESET, HEADER/NAVIGATION AND FOOTER */
 /*-- -------------------------- -->
 <---        Core Styles         -->
 <--- -------------------------- -*/
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0rem) {
   :root {
-    --primary: #e0afa0;
+    --primary: #bc4749;
     --primaryLight: #ffd675;
     --secondary: #001f3f;
     --secondaryLight: #001f3f;
     --headerColor: #1a1a1a;
     --bodyTextColor: #463f3a;
     --bodyTextColorWhite: #fafbfc;
-    --backgroundColor: #f4f3ee;
+    --backgroundColor: #edede9;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -954,7 +953,7 @@
     top: 0;
     left: 0;
     content: "";
-    opacity: 0.7;
+    opacity: 0.55;
     display: block;
     background: #000;
     height: 100%;
@@ -1033,7 +1032,7 @@
     top: 0;
     left: 0;
     content: "";
-    opacity: 0.7;
+    opacity: 0.55;
     display: block;
     background: #000;
     height: 100%;

@@ -105,6 +105,19 @@
             right: calc(-60 / 16 * 1rem);
             transform: rotate(-66deg);
         }
+
+        /* Initial state for animation */
+        .cs-item {
+            opacity: 0;
+            transform: translateY(50px); /* Adjust for sliding effect */
+            transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+        }
+
+        /* When visible in viewport */
+        .cs-item.visible {
+            opacity: 1;
+            transform: translateY(0); /* Reset to normal position */
+        }
     }
 }
 

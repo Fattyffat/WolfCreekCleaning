@@ -11,42 +11,9 @@
     /* 130px - 450px */
     padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
     position: relative;
-    z-index: 1;
+    z-index: 0;
     /* Prevents white rectangle pseudos from overlapping the sections below */
     overflow: hidden;
-  }
-  #hero-143:before {
-    /* Left side of the triangle */
-    content: "";
-    width: 31.25rem;
-    /* make really long so it covers the whole screen all the way to desktop */
-    height: 250rem;
-    background: #fff;
-    opacity: 1;
-    transform: rotate(-67deg);
-    transform-origin: center;
-    position: absolute;
-    display: block;
-    bottom: -139.6875rem;
-    /* this makes the right edge sit at the 50% line at all times */
-    right: 50%;
-    z-index: 0;
-  }
-  #hero-143:after {
-    /* Right side of the triangle */
-    content: "";
-    width: 31.25rem;
-    height: 250rem;
-    background: #fff;
-    opacity: 1;
-    transform: rotate(67deg);
-    transform-origin: center;
-    position: absolute;
-    display: block;
-    bottom: -139.6875rem;
-    /* this makes the left edge sit at the 50% line at all times */
-    left: 50%;
-    z-index: 0;
   }
   #hero-143 .cs-background {
     width: 100%;
@@ -55,7 +22,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -2;
+    z-index: -1;
   }
   #hero-143 .cs-background:before {
     /* Overlay */
@@ -149,8 +116,9 @@
     padding: 0 1rem clamp(2.5rem, 7.9vw, 6.25rem) 1rem;
     position: relative;
     /* give a higher z index than the hero so it can sit on top */
-    z-index: 10;
     background-color: var(--backgroundColor);
+    /* Initial state for animation */
+    /* When visible in viewport */
   }
   #h-services-143 .cs-card-group {
     width: 100%;
@@ -165,9 +133,10 @@
     box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
     border-radius: 0.3125rem;
     border-top: 8px solid var(--primary);
-    background-color: #fff;
+    background-color: #d3d3cf;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
+    z-index: 999;
   }
   #h-services-143 .cs-item {
     list-style: none;
@@ -212,6 +181,15 @@
     max-width: 22.5rem;
     margin: 0 auto;
     color: var(--bodyTextColor);
+  }
+  #h-services-143 .cs-item {
+    opacity: 0;
+    transform: translateY(50px); /* Adjust for sliding effect */
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Longer duration */
+  }
+  #h-services-143 .cs-item.visible {
+    opacity: 1;
+    transform: translateY(0); /* Reset to normal position */
   }
 }
 /* Tablet - 768px */
