@@ -6,6 +6,7 @@
   #why-choose-375 {
     padding: var(--sectionPadding);
     overflow: hidden;
+    background-color: var(--backgroundColor);
   }
   @keyframes floatAnimation {
     0% {
@@ -217,6 +218,9 @@
     right: -2.0625em;
     bottom: 2.6875em;
     z-index: 2;
+  }
+  #why-choose-375 .path {
+    background-color: var(--backgroundColor);
   }
 }
 /* Small Desktop - 1024px */

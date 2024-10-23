@@ -809,9 +809,9 @@
   }
   #cs-navigation .cs-logo {
     /* 40px - 44px */
-    height: clamp(2.5rem, 4vw, 2.75rem);
+    height: clamp(3.25rem, 6.2vw, 4.25rem);
     /* margin-right auto pushes everything away from it to the right */
-    margin: 0 auto 0 0;
+    margin-right: 10rem;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -909,7 +909,7 @@
     justify-content: center;
     align-items: center;
     min-height: 30vh;
-    padding-top: 3.125rem;
+    padding-top: 6.25rem;
   }
   #int-hero picture {
     z-index: -2;
@@ -1075,6 +1075,22 @@
   #cta:before {
     display: none;
   }
+  #cta:after {
+    z-index: -3;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: "";
+    opacity: 1;
+    transform: translateX(-50%);
+    display: block;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(--backgroundColor);
+    height: 69.25rem;
+    width: 125rem;
+  }
 }
 /*-- -------------------------- -->
 <---           Footer           -->
@@ -1082,7 +1098,7 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
   #footer {
-    background: #1c1c1c;
+    background: #d3d3cf;
     padding: 5.25rem 0 1.25rem;
     font-size: min(4vw, 1.2em);
   }
@@ -1136,12 +1152,12 @@
     margin-bottom: 0.75rem;
     list-style: none;
     font-size: 1.125rem;
-    color: #fff;
+    color: #1a1a1a;
   }
   #footer .right-section .lists ul li a {
     text-decoration: none;
     line-height: 1.1666666667em;
-    color: #fff;
+    color: #1a1a1a;
     transition: color 0.3s;
   }
   #footer .right-section .lists ul li a:hover {
@@ -1154,7 +1170,7 @@
     font-size: 1.125rem;
     line-height: 1.1666666667em;
     font-weight: bold;
-    color: #fff;
+    color: #1a1a1a;
   }
   #footer .right-section .lists ul h2:before {
     position: absolute;
@@ -1191,11 +1207,11 @@
   }
   #footer .credit {
     margin: auto;
-    margin-top: 6.25rem;
+    margin-top: 3.125rem;
     width: 96%;
     font-size: 1rem;
     line-height: 2.25rem;
-    color: #fff;
+    color: #1a1a1a;
     text-align: center;
   }
   #footer .credit a {
@@ -1229,15 +1245,11 @@
   #footer .left-section {
     margin: 0;
     width: 25.5625rem;
-    text-align: left;
+    text-align: center;
   }
   #footer .left-section .logo {
     margin-left: 0;
-    height: 2.5rem;
-    text-align: left;
-  }
-  #footer .left-section p {
-    margin-left: 0;
+    height: 12.5rem;
     text-align: left;
   }
   #footer .right-section {
@@ -1279,12 +1291,6 @@
   }
   #footer .credit .copyright {
     display: inline-block;
-  }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #footer {
-    background: #061623;
   }
 }
 

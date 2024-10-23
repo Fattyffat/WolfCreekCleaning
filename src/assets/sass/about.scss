@@ -7,6 +7,7 @@
     #why-choose-375 {
         padding: var(--sectionPadding);
         overflow: hidden;
+        background-color: var(--backgroundColor);
 
         @keyframes floatAnimation {
             0% {
@@ -240,6 +241,10 @@
             right: calc(-33 / 16 * 1em);
             bottom: calc(43 / 16 * 1em);
             z-index: 2;
+        }
+        
+        .path {
+            background-color: var(--backgroundColor);
         }
     }
 }
