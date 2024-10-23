@@ -43,44 +43,6 @@
             }
         }
 
-        .cs-button-solid {
-            font-size: calc(16 / 16 * 1rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            font-weight: 700;
-            text-align: center;
-            min-width: calc(150 / 16 * 1rem);
-            margin: 0;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-            padding: 0 calc(32 / 16 * 1rem);
-            color: #fff;
-            background-color: var(--primary);
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-
-            &:before {
-                content: "";
-                width: 0%;
-                height: 100%;
-                background: #000;
-                opacity: 1;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                transition: width 0.3s;
-            }
-
-            &:hover {
-                &:before {
-                    width: 100%;
-                }
-            }
-        }
-
         .cs-contact-group {
             width: 100%;
             margin-bottom: calc(32 / 16 * 1rem);
