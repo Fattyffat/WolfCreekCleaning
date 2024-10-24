@@ -3,34 +3,33 @@
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #hero-143 {
+  #hero-82 {
     /* Centers button */
     text-align: center;
     /* 144px - 300px - leaving extra space for the navigation */
-    padding: clamp(10rem, 25.95vw, 18.75rem) 1rem 0;
-    /* 130px - 450px */
-    padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
+    padding: clamp(9rem, 25.95vw, 18.75rem) 1rem 0;
+    /* 130px - 200px */
+    padding-bottom: clamp(8.125rem, 12.5vw, 25em);
     position: relative;
-    z-index: 0;
-    /* Prevents white rectangle pseudos from overlapping the sections below */
-    overflow: hidden;
+    z-index: 1;
+    height: 100vh;
   }
-  #hero-143 .cs-background {
+  #hero-82 .cs-background {
     width: 100%;
     height: 100%;
     display: block;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
   }
-  #hero-143 .cs-background:before {
+  #hero-82 .cs-background:before {
     /* Overlay */
     content: "";
     width: 100%;
     height: 100%;
     background: #000;
-    opacity: 0.6;
+    opacity: 0.7;
     position: absolute;
     display: block;
     top: 0;
@@ -39,7 +38,7 @@
     /* prevents the cursor from interacting with it */
     pointer-events: none;
   }
-  #hero-143 .cs-background img {
+  #hero-82 .cs-background img {
     position: absolute;
     top: 0;
     left: 0;
@@ -47,12 +46,12 @@
     width: 100%;
     object-fit: cover;
   }
-  #hero-143 .cs-container {
+  #hero-82 .cs-container {
     width: 100%;
-    max-width: 80rem;
+    max-width: 67.5rem;
     margin: auto;
   }
-  #hero-143 .cs-title {
+  #hero-82 .cs-title {
     /* 39px - 61px */
     font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
     font-weight: 700;
@@ -64,13 +63,11 @@
     color: #fff;
     position: relative;
   }
-  #hero-143 .cs-title:after {
+  #hero-82 .cs-title:after {
     /* Divider Line */
     content: "";
-    /* 60px - 100px */
-    width: clamp(3.75rem, 9.5vw, 6.25rem);
-    /* 4px - 8px */
-    height: clamp(0.25rem, 0.8vw, 0.5rem);
+    width: 6.25rem;
+    height: 0.5rem;
     /* 16px - 24px */
     margin: clamp(1rem, 4vw, 1.5rem) auto clamp(1rem, 4vw, 1.5rem);
     background: var(--primary);
@@ -78,7 +75,7 @@
     position: relative;
     display: block;
   }
-  #hero-143 .cs-text {
+  #hero-82 .cs-text {
     /* 16px - 25px */
     font-size: clamp(1rem, 1.95vw, 1.5625rem);
     line-height: 1.5em;
@@ -90,140 +87,6 @@
     /* 40px - 48px */
     margin-bottom: clamp(2.5rem, 4vw, 3rem);
     color: #fff;
-  }
-}
-/* Desktop - 1300px (To make image background parallax) */
-@media only screen and (min-width: 81.25rem) {
-  #hero-143 {
-    background: url("/assets/images/mainImage.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* makes the parallax effect */
-    background-attachment: fixed;
-  }
-  #hero-143 .cs-background img {
-    display: none;
-  }
-}
-/*-- -------------------------- -->
-<---         Services           -->
-<--- -------------------------- -*/
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #h-services-143 {
-    /* 40px - 100px */
-    padding: 0 1rem clamp(2.5rem, 7.9vw, 6.25rem) 1rem;
-    position: relative;
-    /* give a higher z index than the hero so it can sit on top */
-    background-color: var(--backgroundColor);
-    /* Initial state for animation */
-    /* When visible in viewport */
-  }
-  #h-services-143 .cs-card-group {
-    width: 100%;
-    max-width: 29.0625rem;
-    margin: 0 auto 0;
-    /* negative margin pulls it up on top of the hero section */
-    /* -46px to -76px - we're calculating whatever clamp is and multiplying by -1
-    to make the value negative since clamp doesn't work with negative values */
-    margin-top: calc(clamp(5rem, 13vw, 4.75rem) * -1);
-    /* 40px - 60px top and bottom, 16px - 44px left & right */
-    padding: clamp(2.5rem, 4.7vw, 3.75rem) clamp(1rem, 5.3vw, 2.75rem);
-    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
-    border-radius: 0.3125rem;
-    border-top: 8px solid var(--primary);
-    background-color: #d3d3cf;
-    /* prevents padding and border from affecting height and width */
-    box-sizing: border-box;
-    z-index: 999;
-  }
-  #h-services-143 .cs-item {
-    list-style: none;
-    margin: 0 auto 2rem;
-    width: 100%;
-    max-width: 22.5rem;
-  }
-  #h-services-143 .cs-item:last-of-type {
-    margin-bottom: 0;
-  }
-  #h-services-143 .cs-icon {
-    /* 68px - 88px */
-    width: clamp(4.25rem, 8.8vw, 5.5rem);
-    /* 68px - 88px */
-    height: clamp(4.25rem, 8.8vw, 5.5rem);
-    margin: auto;
-    /* 20px - 24px */
-    margin-bottom: clamp(1.25rem, 5vw, 1.5rem);
-    background: var(--primary);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #h-services-143 .cs-icon img {
-    /* 44px - 52px */
-    width: clamp(2.75rem, 5.8vw, 3.25rem);
-    height: auto;
-  }
-  #h-services-143 .cs-title {
-    font-size: 1.25rem;
-    line-height: 1.2em;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 0 auto 0.5rem;
-    color: var(--headerColor);
-  }
-  #h-services-143 .cs-text {
-    font-size: 1rem;
-    text-align: center;
-    line-height: 1.5em;
-    max-width: 22.5rem;
-    margin: 0 auto;
-    color: var(--bodyTextColor);
-  }
-  #h-services-143 .cs-item {
-    opacity: 0;
-    transform: translateY(50px); /* Adjust for sliding effect */
-    transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Longer duration */
-  }
-  #h-services-143 .cs-item.visible {
-    opacity: 1;
-    transform: translateY(0); /* Reset to normal position */
-  }
-}
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  #h-services-143 .cs-card-group {
-    max-width: 49rem;
-    /* -76px to -320px - we're calculating whatever clamp is and multiplying by -1
-       to make the value negative since clamp doesn't work with negative values */
-    margin-top: calc(clamp(4.75rem, 20vw, 20rem) * -1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    column-gap: 18.75rem; /* Reduced gap for better spacing */
-  }
-  #h-services-143 .cs-item {
-    width: 45%;
-    max-width: 19.625rem;
-  }
-  #h-services-143 .cs-item:last-of-type {
-    margin-bottom: 2rem;
-  }
-}
-/* Desktop - 1300px */
-@media only screen and (min-width: 81.25rem) {
-  #h-services-143 .cs-card-group {
-    max-width: 80rem;
-    flex-wrap: nowrap;
-  }
-  #h-services-143 .cs-item {
-    margin: 0;
-  }
-  #h-services-143 .cs-item:last-of-type {
-    margin-bottom: 0;
   }
 }
 
