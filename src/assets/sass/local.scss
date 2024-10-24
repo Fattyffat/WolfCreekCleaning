@@ -559,19 +559,25 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #reviews-62 {
+    #reviews-1832 {
         padding: var(--sectionPadding);
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
         background-color: var(--backgroundColor);
 
         .cs-container {
             width: 100%;
-            max-width: calc(1280 / 16 * 1rem);
+            /* changes to 1280px at tablet */
+            max-width: calc(550/16 * 1rem);
             margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
             /* 48px - 64px */
             gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+            z-index: 1;
         }
 
         .cs-content {
@@ -584,80 +590,210 @@
             align-items: center;
         }
 
-        .cs-card-group {
-            width: 100%;
+        .cs-title {
+            max-width: 26ch;
             margin: 0;
-            padding: 0;
+        }
+
+        .cs-flex-group {
+            width: 100%;
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
-            gap: calc(20 / 16 * 1rem);
+            align-items: center;
+            gap: calc(48/16 * 1rem);
         }
 
-        .cs-item {
-            list-style: none;
-            width: 100%;
-            max-width: calc(413 / 16 * 1rem);
-            margin: 0;
-            padding: 0;
+        .cs-review-group {
+            text-align: center;
+            max-width: calc(860/16 * 1rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
         }
 
-        .cs-img {
-            width: calc(68 / 16 * 1rem);
-            height: calc(68 / 16 * 1rem);
-            margin: 0 auto calc(16 / 16 * 1rem);
-            border-radius: 50%;
+        .cs-stars {
+            width: calc(162/16 * 1rem);
+            height: auto;
+            margin: 0 0 calc(24/16 * 1rem);
             display: block;
         }
 
-        .cs-name {
-            font-size: calc(20 / 16 * 1rem);
+        .cs-quote {
+            /* 244px - 340px */
+            width: clamp(15.25rem, 25vw, 21.25rem);
+            height: auto;
+            margin: 0 0 calc(24/16 * 1rem) 0;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            z-index: -1;
+            transform: translateX(-50%);
+        }
+
+        .cs-review-text {
+            /* 25px - 39px */
+            font-size: clamp(1.5625rem, 3vw, 2.4375rem);
             line-height: 1.2em;
-            text-align: center;
+            font-weight: bold;
+            text-align: inherit;
+            margin: 0 0 calc(40/16 * 1rem) 0;
+            color: var(--headerColor);
+        }
+
+        .cs-name {
+            font-size: calc(20/16 * 1rem);
+            line-height: 1.2em;
+            text-align: inherit;
             font-weight: 700;
-            margin: 0;
+            margin: 0 0 calc(4/16 * 1rem) 0;
             color: var(--headerColor);
             display: block;
         }
 
-        .cs-desc {
-            font-size: calc(16 / 16 * 1rem);
-            line-height: 1.5em;
-            text-align: center;
-            margin: 0 0 calc(16 / 16 * 1rem);
-            color: #7d799c;
+        .cs-job {
+            font-size: calc(16/16 * 1rem);
+            line-height: 1.2em;
+            text-align: inherit;
+            margin: 0;
+            color: var(--primary);
             display: block;
         }
 
-        .cs-item-text {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 2vw, 1rem);
-            text-align: center;
-            line-height: 1.5em;
-            margin: auto;
-            color: var(--bodyTextColor);
+        .cs-image-group {
+            /* scales the whole section down and ties the font size to the vw and stops at 70% of the vale of 1em, changes at desktop */
+            font-size: min(3.7vw, 1rem);
+            /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+            width: calc(372/16 * 1em);
+            height: calc(352/16 * 1em);
+            /* make a white shadow to fade over the texture background behind it so it hides the fact its a mask on top of the image */
+            // box-shadow: rgba(255,255,255, 1) 0px -45px 90px 4px;
+            position: relative;
+            z-index: -1;
         }
 
+        .cs-picture {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                /* makes it act like a background image */
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-mask {
+            width: 101%;
+            height: 101%;
+            object-fit: cover;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .cs-dark {
+            display: none;
+        }
+
+        .cs-waves {
+            width: 55vw;
+            /* 400px - 566px */
+            max-width: clamp(25rem, 40vw, 35.375rem);
+            height: auto;
+            opacity: 0.5;
+            position: absolute;
+            top: 0;
+            /* 100px - 160px */
+            right: calc(clamp(6.25rem, 17vw, 10rem)*-1);
+            z-index: -1;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                opacity: .12;
+                /* Makes img tag act as a background image */
+                object-fit: cover;
+            }
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #000;
+        }
+        .swiper-pagination-bullet {
+            background: #000;
+        }
+        
     }
 }
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #reviews-62 {
-        .cs-card-group {
-            flex-direction: row;
-            justify-content: center;
-            align-items: stretch;
-            flex-wrap: wrap;
-            row-gap: calc(40 / 16 * 1rem);
+    #reviews-1832 {
+        .cs-container {
+            max-width: calc(1280/16 * 1rem);
         }
 
-        .cs-item {
-            /* we do this so it's stackable. You can add new any number of reviews you want and they will stack and center in the middle. We dont use grid because if you have an odd number of reviews, they don't stay centered.  They align with their grid lines. If you want 4 reviews in a row, lower the width under 23% to get the desired sizes fit 4 in a row and then stack when you add more*/
-            width: clamp(31.5%, 30vw, 32.3%);
+        .cs-flex-group {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .cs-image-group {
+            font-size: min(1.68vw, 1rem);
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
+
+        .cs-review-group {
+            text-align: left;
+            width: 65vw;
+            align-items: flex-start;
+        }
+
+        .cs-quote {
+            left: auto;
+            right: 0;
+            transform: none;
         }
     }
 }
-
                                 

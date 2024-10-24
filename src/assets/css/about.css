@@ -342,7 +342,7 @@
     border-radius: 50%;
     /* cover the 1px gap between border and image */
     background-color: #f7f7f7;
-    border: 12px solid #f7f7f7;
+    border: 12px solid var(--primary);
     /* clips image to the circle */
     overflow: hidden;
     position: absolute;
@@ -370,7 +370,7 @@
     border-radius: 50%;
     /* cover the 1px gap between border and image */
     background-color: #f7f7f7;
-    border: 12px solid #f7f7f7;
+    border: 12px solid var(--primary);
     /* clips image to the circle */
     overflow: hidden;
     position: absolute;
@@ -398,7 +398,7 @@
     height: auto;
     position: absolute;
     right: 2.875em;
-    bottom: 4.0625em;
+    bottom: 9.375em;
   }
   #why-choose-375 .cs-person img {
     width: 100%;
@@ -414,6 +414,9 @@
   }
   #why-choose-375 .path {
     background-color: var(--backgroundColor);
+  }
+  #why-choose-375 .click-box {
+    text-decoration: none;
   }
 }
 /* Small Desktop - 1024px */

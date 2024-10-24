@@ -390,7 +390,7 @@
             border-radius: 50%;
             /* cover the 1px gap between border and image */
             background-color: #f7f7f7;
-            border: 12px solid #f7f7f7;
+            border: 12px solid var(--primary);
             /* clips image to the circle */
             overflow: hidden;
             position: absolute;
@@ -420,7 +420,7 @@
             border-radius: 50%;
             /* cover the 1px gap between border and image */
             background-color: #f7f7f7;
-            border: 12px solid #f7f7f7;
+            border: 12px solid var(--primary);
             /* clips image to the circle */
             overflow: hidden;
             position: absolute;
@@ -450,7 +450,7 @@
             height: auto;
             position: absolute;
             right: calc(46 / 16 * 1em);
-            bottom: calc(65 / 16 * 1em);
+            bottom: calc(150 / 16 * 1em);
 
             img {
                 width: 100%;
@@ -469,6 +469,11 @@
         
         .path {
             background-color: var(--backgroundColor);
+        }
+
+        .click-box {
+            text-decoration: none;
+            
         }
     }
 }
