@@ -384,7 +384,7 @@ eleventyNavigation:
                         
                         // If color is for common elements, update both #cs-box and #cs-item
                         if (color === "boxBGColor") {
-                            document.querySelectorAll("#cs-box, #cs-item").forEach(element => {
+                            document.querySelectorAll("#cs-box, #cs-item, #").forEach(element => {
                                 element.style.backgroundColor = this.value;
                             });
                         }

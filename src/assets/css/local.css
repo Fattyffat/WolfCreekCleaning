@@ -423,7 +423,7 @@
     list-style: none;
     /* 20px - 32px */
     padding: clamp(1.25rem, 2.3vw, 2rem);
-    background-color: #f2d4c4;
+    background-color: var(--boxBGColor);
     border-radius: 1rem;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
