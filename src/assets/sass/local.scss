@@ -67,13 +67,13 @@
         .cs-title {
             /* 23 characters wide including spaces */
             max-width: 26ch;
-            color: #1a1a1a;
+            color: var(--headerColor);
             font-weight: 600;
         }
 
         .cs-text {
             margin-bottom: calc(12/16 * 1rem);
-            color: #1a1a1a;
+            color: var(--bodyTextColor);
 
             &:last-of-type {
                 margin-bottom: 0;
@@ -118,7 +118,7 @@
             box-sizing: border-box;
             padding: calc(32/16 * 1rem);
             border-radius: calc(8/16 * 1rem);
-            background-color: #f2d4c4;
+            background-color: var(--boxBGColor);
             position: absolute;
             /* 16px - 40px */
             bottom: clamp(1rem, 4vw, 2.5rem);
@@ -238,7 +238,7 @@
             box-sizing: border-box;
             /* 16px - 32px */
             padding: clamp(1rem, 4.5vw, 2rem);
-            background-color: #f2d4c4;
+            background-color: var(--boxBGColor);
             border-radius: calc(8/16 * 1rem);
             box-sizing: border-box;
             display: flex;

@@ -61,12 +61,12 @@
   #services-2051 .cs-title {
     /* 23 characters wide including spaces */
     max-width: 26ch;
-    color: #1a1a1a;
+    color: var(--headerColor);
     font-weight: 600;
   }
   #services-2051 .cs-text {
     margin-bottom: 0.75rem;
-    color: #1a1a1a;
+    color: var(--bodyTextColor);
   }
   #services-2051 .cs-text:last-of-type {
     margin-bottom: 0;
@@ -105,7 +105,7 @@
     box-sizing: border-box;
     padding: 2rem;
     border-radius: 0.5rem;
-    background-color: #f2d4c4;
+    background-color: var(--boxBGColor);
     position: absolute;
     /* 16px - 40px */
     bottom: clamp(1rem, 4vw, 2.5rem);
@@ -213,7 +213,7 @@
     box-sizing: border-box;
     /* 16px - 32px */
     padding: clamp(1rem, 4.5vw, 2rem);
-    background-color: #f2d4c4;
+    background-color: var(--boxBGColor);
     border-radius: 0.5rem;
     box-sizing: border-box;
     display: flex;
