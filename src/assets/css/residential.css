@@ -264,13 +264,13 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #RTsbsr-952 {
-    background-color: #363636;
+    background-color: #e6e6e2;
   }
   #RTsbsr-952 .cs-title,
   #RTsbsr-952 .cs-header,
   #RTsbsr-952 .cs-text,
   #RTsbsr-952 .cs-link-content {
-    color: var(--bodyTextColorWhite);
+    color: var(--bodyTextColor);
   }
   #RTsbsr-952 .cs-text,
   #RTsbsr-952 .cs-link-content {
