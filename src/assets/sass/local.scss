@@ -331,6 +331,19 @@
         .cs-button-solid {
             margin-top: 3%;
         }
+
+        .cs-item {
+            opacity: 0; /* Start hidden */
+            transform: scale(0.8); /* Start slightly smaller */
+            transition: opacity 0.6s ease, transform 1.2s ease; /* Transition properties */
+        }
+        
+        /* When visible, apply the animation */
+        .cs-item.visible {
+            opacity: 1; /* Fully visible */
+            transform: scale(1); /* Scale to original size */
+        }
+        
     }
 }
 

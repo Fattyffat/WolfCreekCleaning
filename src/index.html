@@ -323,10 +323,10 @@ eleventyNavigation:
         // Wait for the document to load
         document.addEventListener("DOMContentLoaded", function () {
             const observerOptions = {
-                root: null,   // Use the viewport as root
+                root: null,
                 threshold: 0.1 // Trigger animation when 10% of the section is visible
             };
-    
+
             // Callback for when the section becomes visible
             function handleIntersection(entries, observer) {
                 entries.forEach(entry => {
@@ -336,16 +336,20 @@ eleventyNavigation:
                     }
                 });
             }
-    
+
             // Create the observer
             const observer = new IntersectionObserver(handleIntersection, observerOptions);
-    
+
             // Target all the items inside the .cs-card-group for animation
             const csItems = document.querySelectorAll('.cs-item');
-    
+
             // Observe each item
-            csItems.forEach(item => observer.observe(item));
+            csItems.forEach(item => {
+                observer.observe(item);
+            });
         });
+
+
 
 
         var swiper = new Swiper('.swiper-container', {
