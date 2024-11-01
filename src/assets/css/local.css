@@ -295,6 +295,9 @@
     height: auto;
     display: block;
   }
+  #services-2051 .learn-more {
+    color: #000;
+  }
   #services-2051 .cs-button-solid {
     margin-top: 3%;
   }
