@@ -170,7 +170,7 @@ eleventyNavigation:
     </section>
     
     
-        <!-- ============================================ -->
+    <!-- ============================================ -->
     <!--             Side By Side Reverse             -->
     <!-- ============================================ -->
 
@@ -261,6 +261,31 @@ eleventyNavigation:
             </div>
         </div>
     </section>
+
+
+    <script>
+        
+        // Select all elements with the class 'cs-content'
+        const contents = document.querySelectorAll('.cs-content');
+
+        // Create an Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add 'visible' class when element enters viewport
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        // Observe each '.cs-content' element
+        contents.forEach(content => {
+            observer.observe(content);
+        });
+
+    </script>
 
 
     {% include 'components/cta.html' %}

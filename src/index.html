@@ -89,30 +89,8 @@ eleventyNavigation:
                 
             </p>
 
-            <!-- <div>
-                <label class="cs-text">Background Color:</label>
-                <input type="color" id="backgroundColor" value="#edede9">
-            </div>
-            <div>
-                <label class="cs-text">Box Background Color</label>
-                <input type="color" id="boxBGColor" value="#f2d4c4">
-            </div>
-            <div>
-                <label class="cs-text">Primary Color (Buttons, title topper):</label>
-                <input type="color" id="primary" value="#bc4749">
-            </div>
-            <div>
-                <label class="cs-text">Header Color</label>
-                <input type="color" id="headerColor" value="#1a1a1a">
-            </div>
-            <div>
-                <label class="cs-text">Body Text Color:</label>
-                <input type="color" id="bodyTextColor" value="#1a1a1a">
-            </div> -->
-
-
             
-            <a href="" class="cs-button-solid">Get in Touch</a>
+            <a href="/contact" class="cs-button-solid">Get in Touch</a>
         </div>
 
         <!-- Background Image -->
@@ -172,7 +150,7 @@ eleventyNavigation:
                             Our residential cleaning services in Calgary offer thorough home cleaning, from kitchens to bedrooms, leaving your house spotless and fresh. Book reliable and affordable house cleaning today!
                         </p>
                         <a href="/residential" class="cs-link learn-more">
-                            Learn More
+                            View Residential Cleaning Services
                         </a>
                     </div>
                     <picture class="cs-item-picture">
@@ -183,12 +161,12 @@ eleventyNavigation:
                 </li>
                 <li class="cs-item">
                     <div class="cs-flex">
-                        <h3 class="cs-h3">Commerical Cleaning</h3>
+                        <h3 class="cs-h3">Commercial Cleaning</h3>
                         <p class="cs-item-text">
                             We provide professional commercial cleaning for Calgary offices and businesses, ensuring a clean, hygienic workspace. Trust us for efficient office cleaning services that meet your business needs.
                         </p>
                         <a href="/commercial" class="cs-link learn-more">
-                            Learn More
+                            View Commercial Cleaning Services
                         </a>
                     </div>
                     <picture class="cs-item-picture">
@@ -371,34 +349,6 @@ eleventyNavigation:
             delay: 5000, // Auto-slide every 5 seconds
         },
         });
-
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const colors = ["primary", "backgroundColor", "bodyTextColor", "headerColor", "boxBGColor"];
-            
-            colors.forEach(color => {
-                const inputElement = document.getElementById(color);
-                
-                if (inputElement) { // Check if the element exists
-                    inputElement.addEventListener("input", function() {
-                        // Apply color to CSS variables
-                        document.documentElement.style.setProperty(`--${color}`, this.value);
-                        console.log(`--${color} set to ${this.value}`);
-                        
-                        // If color is for common elements, update both #cs-box and #cs-item
-                        if (color === "boxBGColor") {
-                            document.querySelectorAll("#cs-box, #cs-item, #").forEach(element => {
-                                element.style.backgroundColor = this.value;
-                            });
-                        }
-                    });
-                } else {
-                    console.warn(`Element with ID ${color} not found`);
-                }
-            });
-        });
-
-
 
 
     </script>

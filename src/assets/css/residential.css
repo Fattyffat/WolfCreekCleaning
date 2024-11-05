@@ -11,6 +11,8 @@
     position: relative;
     /* clips anything overflowing */
     overflow: hidden;
+    /* Initial hidden state */
+    /* Visible state */
   }
   #RTsbsr-952 .cs-container,
   #RTsbsr-952 .cs-container,
@@ -219,6 +221,31 @@
   #RTsbst-952 .cs-floater {
     display: none;
   }
+  #RTsbsr-952 .cs-content .cs-topper,
+  #RTsbsr-952 .cs-content .cs-title,
+  #RTsbsr-952 .cs-content .cs-text,
+  #RTsbsr-952 .cs-content .cs-topper,
+  #RTsbsr-952 .cs-content .cs-title,
+  #RTsbsr-952 .cs-content .cs-text,
+  #RTsbst-952 .cs-content .cs-topper,
+  #RTsbst-952 .cs-content .cs-title,
+  #RTsbst-952 .cs-content .cs-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  #RTsbsr-952 .cs-content.visible .cs-topper,
+  #RTsbsr-952 .cs-content.visible .cs-title,
+  #RTsbsr-952 .cs-content.visible .cs-text,
+  #RTsbsr-952 .cs-content.visible .cs-topper,
+  #RTsbsr-952 .cs-content.visible .cs-title,
+  #RTsbsr-952 .cs-content.visible .cs-text,
+  #RTsbst-952 .cs-content.visible .cs-topper,
+  #RTsbst-952 .cs-content.visible .cs-title,
+  #RTsbst-952 .cs-content.visible .cs-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
@@ -265,6 +292,8 @@
 @media only screen and (min-width: 0rem) {
   #RTsbsr-952 {
     background-color: #e6e6e2;
+    /* Initial hidden state */
+    /* Visible state */
   }
   #RTsbsr-952 .cs-title,
   #RTsbsr-952 .cs-header,
@@ -278,6 +307,19 @@
   }
   #RTsbsr-952 .cs-link:before {
     background-color: #484848;
+  }
+  #RTsbsr-952 .cs-content .cs-topper,
+  #RTsbsr-952 .cs-content .cs-title,
+  #RTsbsr-952 .cs-content .cs-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  #RTsbsr-952 .cs-content.visible .cs-topper,
+  #RTsbsr-952 .cs-content.visible .cs-title,
+  #RTsbsr-952 .cs-content.visible .cs-text {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 /* Small Desktop - 1024px */

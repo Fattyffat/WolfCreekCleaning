@@ -199,6 +199,23 @@
         .cs-floater {
             display: none;
         }
+
+        /* Initial hidden state */
+        .cs-content .cs-topper,
+        .cs-content .cs-title,
+        .cs-content .cs-text {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        /* Visible state */
+        .cs-content.visible .cs-topper,
+        .cs-content.visible .cs-title,
+        .cs-content.visible .cs-text {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }
 
@@ -269,6 +286,23 @@
             &:before {
                 background-color: #484848;
             }
+        }
+
+        /* Initial hidden state */
+        .cs-content .cs-topper,
+        .cs-content .cs-title,
+        .cs-content .cs-text {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        /* Visible state */
+        .cs-content.visible .cs-topper,
+        .cs-content.visible .cs-title,
+        .cs-content.visible .cs-text {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 }
