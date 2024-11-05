@@ -84,7 +84,7 @@
         &:hover {
             color: #ffffff;
             transform: scale(1.08); /* Slight zoom on hover */
-            background: linear-gradient(135deg, #f7a072, #bc4749); /* Gradient background on hover */
+            background: linear-gradient(135deg, #74c69d, #2d6a4f); /* Gradient background on hover */
             
             &:before {
                 width: 100%;
@@ -99,7 +99,7 @@
             content: "";
             opacity: 1;
             display: block;
-            background-color: #f7a072;
+            background-color: #2d6a4f;
             height: 100%;
             border-radius: 10px; /* Rounded corners for the hover effect background */
             
