@@ -307,7 +307,7 @@
     border-radius: 50%;
     /* cover the 1px gap between border and image */
     background-color: #f7f7f7;
-    border: 12px solid var(--primary);
+    border: 6px solid var(--primary);
     /* clips image to the circle */
     overflow: hidden;
     position: absolute;
@@ -335,7 +335,7 @@
     border-radius: 50%;
     /* cover the 1px gap between border and image */
     background-color: #f7f7f7;
-    border: 12px solid var(--primary);
+    border: 6px solid var(--primary);
     /* clips image to the circle */
     overflow: hidden;
     position: absolute;
