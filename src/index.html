@@ -15,7 +15,7 @@ eleventyNavigation:
     <link rel="stylesheet" href="/assets/css/local.css"/>
     <link rel="stylesheet" href="/assets/css/critical.css"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
 
 
     <!-- Script for Netlify Identity -->
@@ -85,7 +85,8 @@ eleventyNavigation:
         <div class="cs-container">
             <h1 class="cs-title">WolfCreek Cleaning Services</h1>
             <p class="cs-text">
-                At Wolfcreek Cleaning Services, we provide top-quality residential and commercial cleaning throughout Calgary. From homes to offices, our experienced, bonded, licensed, and insured team ensures spotless results every time, using eco-friendly products for a healthier environment.
+                At Wolfcreek Cleaning Services, we provide top-quality residential and commercial cleaning throughout Calgary. 
+                From homes to offices, our experienced, bonded, licensed, and insured team ensures spotless results every time, using eco-friendly products for a healthier environment.
                 
             </p>
 
@@ -319,6 +320,16 @@ eleventyNavigation:
 
 
     <script>
+
+          // Lazy load the Swiper CSS after the page load
+        window.addEventListener('load', function () {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://unpkg.com/swiper/swiper-bundle.min.css';
+            document.head.appendChild(link);
+        });
+
+        
         // Wait for the document to load
         document.addEventListener("DOMContentLoaded", function () {
             const observerOptions = {
