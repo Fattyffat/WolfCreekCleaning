@@ -321,15 +321,62 @@ eleventyNavigation:
 
     <script>
 
-          // Lazy load the Swiper CSS after the page load
-        window.addEventListener('load', function () {
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = 'https://unpkg.com/swiper/swiper-bundle.min.css';
-            document.head.appendChild(link);
-        });
+            // Load Swiper CSS asynchronously
+            window.addEventListener('load', function () {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://unpkg.com/swiper/swiper-bundle.min.css';
+                document.head.appendChild(link);
+            });
 
-        
+            // Create a function to load the Swiper JS asynchronously and initialize Swiper once it's loaded
+            function loadSwiper() {
+                var script = document.createElement('script');
+                script.src = 'https://unpkg.com/swiper/swiper-bundle.min.js';
+                script.onload = function () {
+                    // Initialize Swiper once the script is loaded
+                    var swiper = new Swiper('.swiper-container', {
+                        slidesPerView: 'auto',
+                        centeredSlides: true,
+                        spaceBetween: 0, // No gap between slides
+                        loop: true,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        autoplay: {
+                            delay: 5000,
+                        },
+                    });
+                };
+                document.body.appendChild(script); // Append script tag to load it
+            }
+
+            // Use the Intersection Observer to load Swiper JS only when needed
+            document.addEventListener("DOMContentLoaded", function () {
+                const swiperSection = document.querySelector('.swiper-container'); // Your Swiper container
+
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // Load Swiper JS when the Swiper container is in view
+                            loadSwiper();
+                            observer.disconnect(); // Stop observing once the script is loaded
+                        }
+                    });
+                }, {
+                    threshold: 0.1 // Trigger when 10% of the section is visible
+                });
+
+                // Observe the Swiper section
+                observer.observe(swiperSection);
+            });
+
+
         // Wait for the document to load
         document.addEventListener("DOMContentLoaded", function () {
             const observerOptions = {
@@ -391,27 +438,6 @@ eleventyNavigation:
         // Start observing the .cs-box-number element
         observer.observe(numberElement);
         });
-
-
-
-        var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        spaceBetween: 0, // No gap between slides
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        autoplay: {
-            delay: 5000,
-        },
-    });
-
 
 
     </script>
