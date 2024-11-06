@@ -1,6 +1,6 @@
 ---
 title: 'Wolfcreek Cleaning'
-description: 'Meta description for the page'
+description: 'Discover top-tier cleaning services in Calgary with WolfCreek Clean. For 15 years, we have delivered trusted, eco-friendly residential and commercial cleaning. Your spotless space awaits!'
 preloadImg: '/assets/images/mainImage.jpg'
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
@@ -19,7 +19,7 @@ eleventyNavigation:
 
 
     <!-- Script for Netlify Identity -->
-    <!-- <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script defer>
         if (window.netlifyIdentity) {
             window
@@ -134,7 +134,7 @@ eleventyNavigation:
                     </picture>
                     <div class="cs-box">
                         <img class="cs-box-icon" loading="lazy" decoding="async" src="/assets/svgs/people.svg" alt="People" width="60" height="60">
-                        <span class="cs-box-number">0+</span>
+                        <span class="cs-box-number">54+</span>
                         <span class="cs-box-desc">
                             Homes and Businesses Cleaned
                         </span>
@@ -331,12 +331,11 @@ eleventyNavigation:
         });
 
 
-
-
         var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true, // Allows infinite loop
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 0, // No gap between slides
+        loop: true,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -346,9 +345,10 @@ eleventyNavigation:
             prevEl: '.swiper-button-prev',
         },
         autoplay: {
-            delay: 5000, // Auto-slide every 5 seconds
+            delay: 5000,
         },
-        });
+    });
+
 
 
     </script>
