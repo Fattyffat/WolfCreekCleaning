@@ -347,6 +347,19 @@
             opacity: 1; /* Fully visible */
             transform: scale(1); /* Scale to original size */
         }
+
+
+        .cs-link.learn-more {
+            display: inline-block;
+            // color: #007acc;
+            transition: transform 0.2s ease, color 0.2s ease;
+            text-decoration: none;
+        }
+        
+        .cs-link.learn-more:hover {
+            color: #2d6a4f;
+            transform: scale(1.1); /* Slightly enlarges the link */
+        }
         
     }
 }

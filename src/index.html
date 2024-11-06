@@ -165,7 +165,7 @@ eleventyNavigation:
                         <p class="cs-item-text">
                             We provide professional commercial cleaning for Calgary offices and businesses, ensuring a clean, hygienic workspace. Trust us for efficient office cleaning services that meet your business needs.
                         </p>
-                        <a href="/commercial" class="cs-link learn-more">
+                        <a href="/commercial" class="cs-link learn-more" >
                             View Commercial Cleaning Services
                         </a>
                     </div>
@@ -229,7 +229,7 @@ eleventyNavigation:
                     </div>
                 </li>
             </ul>
-            <a href="" class="cs-button-solid">Contact Us</a>
+            <a href="/contact" class="cs-button-solid">Contact Us</a>
             <!--Floating Arrow Graphic-->
             <img class="cs-floater" src="/assets/svgs/arrowPointer.svg" alt="arrow" loading="lazy" decoding="async" aria-hidden="true">
         </div>
@@ -271,9 +271,9 @@ eleventyNavigation:
                         <div class="cs-flex-group">
                             <div class="cs-image-group">
                                 <picture class="cs-picture">
-                                    <source media="(max-width: 600px)" srcset="/assets/images/reviewMop.jpg">
-                                    <source media="(min-width: 601px)" srcset="/assets/images/reviewMop.jpg">
-                                    <img loading="lazy" decoding="async" src="/assets/images/reviewMop.jpg" alt="person" width="570" height="680">
+                                    <source media="(max-width: 600px)" srcset="/assets/images/reviewMop1.jpg">
+                                    <source media="(min-width: 601px)" srcset="/assets/images/reviewMop1.jpg">
+                                    <img loading="lazy" decoding="async" src="/assets/images/reviewMop1.jpg" alt="person" width="570" height="680">
                                 </picture>
                             </div>
                             <div class="cs-review-group">
@@ -329,6 +329,40 @@ eleventyNavigation:
                 observer.observe(item);
             });
         });
+
+        document.addEventListener("DOMContentLoaded", function() {
+        const numberElement = document.querySelector(".cs-box-number");
+        const targetNumber = parseInt(numberElement.textContent, 10);  // Get the target number from the span
+        let currentNumber = 0;
+        const duration = 1500;  // Duration in milliseconds (2 seconds)
+        const stepTime = duration / targetNumber;  // How often the number increases
+
+        function updateNumber() {
+            if (currentNumber < targetNumber) {
+                currentNumber++;
+                numberElement.textContent = currentNumber + "+";
+                setTimeout(updateNumber, stepTime);
+            }
+        }
+
+        // Intersection Observer to trigger animation when the element is in view
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Start the number animation when in view
+                    updateNumber();
+                    // Stop observing after starting the animation
+                    observer.disconnect();
+                }
+            });
+        }, {
+            threshold: 0.5 // Trigger when 50% of the element is in view
+        });
+
+        // Start observing the .cs-box-number element
+        observer.observe(numberElement);
+        });
+
 
 
         var swiper = new Swiper('.swiper-container', {

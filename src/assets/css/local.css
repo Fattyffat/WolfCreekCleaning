@@ -310,6 +310,15 @@
     opacity: 1; /* Fully visible */
     transform: scale(1); /* Scale to original size */
   }
+  #services-2051 .cs-link.learn-more {
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+    text-decoration: none;
+  }
+  #services-2051 .cs-link.learn-more:hover {
+    color: #2d6a4f;
+    transform: scale(1.1); /* Slightly enlarges the link */
+  }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
