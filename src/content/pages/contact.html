@@ -34,47 +34,70 @@ eleventyNavigation:
     <!--                   Contact                    -->
     <!-- ============================================ -->
 
-    <section id="contact-1184">
+    <section id="contact-1441">
         <div class="cs-container">
-            <picture class="cs-background">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="/assets/images/contactLeft.jpg">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="/assets/images/contactLeft.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/contacteft.jpg" alt="tools" width="637" height="726">
-            </picture>
             <div class="cs-content">
-                <!-- <span class="cs-topper">Contact Us</span> -->
-                <h2 class="cs-title">Get in Touch</h2>
-                <!--Form-->
-                <form class="cs-form" id="cs-form-1184" name="Contact Form" method="post">
-                    <label class="cs-label">
-                        Name*
-                        <input class="cs-input" required type="text" id="name-1184" name="name" placeholder="">
-                    </label>
-                    <label class="cs-label cs-email">
-                        Email*
-                        <input class="cs-input" required type="email" id="email-1184" name="email" placeholder="">
-                    </label>
-                    <label class="cs-label cs-phone">
-                        Phone*
-                        <input class="cs-input" required type="phone" id="phone-1184" name="phone" placeholder="">
-                    </label>
-                    <label class="cs-label">
-                        Message*
-                        <textarea class="cs-input cs-textarea" required name="Message" id="message-1184" placeholder=""></textarea>
-                    </label>
-                    <button class="cs-button-solid" type="submit">Send Message</button>
-                </form>
+                <span class="cs-topper">Get in Touch</span>
+                <h2 class="cs-title">We're Here to Help with Your Cleaning Needs</h2>
             </div>
-            <picture class="cs-background">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="/assets/images/contactRight.jpg">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="/assets/images/contactRight.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/contactRight.jpg" alt="More Tools" width="637" height="726">
-            </picture>
+            <div class="cs-contact-group">
+                <p class="cs-text">
+                    Get in touch with WolfCreek Clean, Calgary’s trusted choice for professional cleaning services. 
+                    Whether you have questions, need a quote, or are ready to schedule your cleaning, our team is here to help. Contact us today to experience the difference a spotless space can make!                </p>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <picture class="cs-icon-wrapper">
+                            <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-yellow.svg" alt="phone icon" class="cs-icon" width="40" height="40" decoding="async">
+                        </picture>
+                        <div class="cs-flex-group">
+                            <span class="cs-header">Phone</span>
+                            <a href="tel:403-605-3929
+                            " class="cs-link">403-605-3929
+                            </a>
+                        </div>
+                    </li>
+                    <li class="cs-li">
+                        <picture class="cs-icon-wrapper">
+                            <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/yellow-mail.svg" alt="mail iocn" class="cs-icon" width="40" height="40" decoding="async">
+                        </picture>
+                        <div class="cs-flex-group">
+                            <span class="cs-header">Email</span>
+                            <a href="mailto:{{client.email}}
+                            " class="cs-link">wolfcreekcalgary@gmail.com
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <picture class="cs-background">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/contactRight.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/contactRight.jpg">
+                    <img loading="lazy" decoding="async" src="/assets/images/contactRight.jpg" alt="wind turbine" width="650" height="613">
+                </picture>
+            </div>
+            <!--Form-->
+            <form class="cs-form" id="cs-form-1441" name="Contact Form" method="post" netlify>
+                <label class="cs-label">
+                    Name
+                    <input class="cs-input" required type="text" id="name-1441" name="name" placeholder="Name">
+                </label>
+                <label class="cs-label cs-email">
+                    Email
+                    <input class="cs-input" required type="email" id="email-1441" name="email" placeholder="Email">
+                </label>
+                <label class="cs-label cs-phone">
+                    Phone
+                    <input class="cs-input" required type="number" id="phone-1441" name="phone" placeholder="Phone">
+                </label>
+                <label class="cs-label">
+                    Message
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-1441" placeholder="Write message..."></textarea>
+                </label>
+                <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+            </form>
         </div>
     </section>
+                                
                                 
 {% endblock %}
